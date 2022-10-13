@@ -32,8 +32,8 @@ el desempeño del modelo fue estimado a través de indicadores como el **racall*
 # Resultados
 A continuación, se presentan aquellos resultados más relevantes relacionados al desarrollo metodológico, la eficiencia del modelo y su implementación.
 
-#  Consumo energético sin intervención
-Se muestra la serie de tiempo del consumo energético en los 12 meses anteriores al mes de referencia, el mes 12 es el mes más antiguo (mas lejos en el pasado) y el mes 1 es el mes más cercano al de referencia, esto aplica para todas las imágenes. Los valores son obtenidos desde una distribución normal a la cual se le agregó ruido.
+#  Consumo de agua potable sin intervención
+Se muestra la serie de tiempo del consumo de agua medido en los 12 meses anteriores al mes de referencia, el mes 12 es el mes más antiguo (mas lejos en el pasado) y el mes 1 es el mes más cercano al de referencia, esto aplica para todas las imágenes. Los valores son obtenidos desde una distribución normal a la cual se le agregó ruido.
 
 [![Consumo-de-agua-1.png](https://i.postimg.cc/3JJnhGsF/Consumo-de-agua-1.png)](https://postimg.cc/142pc858)
 
