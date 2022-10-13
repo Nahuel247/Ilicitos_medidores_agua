@@ -38,27 +38,27 @@ Se muestra la serie de tiempo del consumo energético en los 12 meses anteriores
 [![Consumo-de-agua-1.png](https://i.postimg.cc/3JJnhGsF/Consumo-de-agua-1.png)](https://postimg.cc/142pc858)
 
 # Intervención del medidor tipo1
-A continuación, se muestra el efecto que tiene la intervención del tipo 1 sobre el consumo energético. Se puede apreciar que a partir de cierto punto el valor del consumo se “congela”.
+A continuación, se muestra el efecto que tiene la intervención del tipo 1 sobre la medición de agua consumida. Se puede apreciar que a partir de cierto punto el valor del consumo se “congela”.
 
 [![Consumo-de-agua-2.png](https://i.postimg.cc/6pxV3GSP/Consumo-de-agua-2.png)](https://postimg.cc/1fMV74y0)
 
 # Intervención del medidor tipo2
-A continuación, se muestra el efecto que tiene la intervención del tipo 2 sobre el consumo energético. Se puede apreciar que hay una reducción porcentual en el consumo energético.
+A continuación, se muestra el efecto que tiene la intervención del tipo 2 sobre la medición de agua consumida. Se puede apreciar que hay una reducción porcentual en el consumo medido.
 
 [![Consumo-de-agua-3.png](https://i.postimg.cc/d3dBHRp8/Consumo-de-agua-3.png)](https://postimg.cc/QK81V7Xt)
 
 # Intervención del medidor tipo3
-A continuación, se muestra el efecto que tiene la intervención del tipo 3 sobre el consumo energético. Se puede apreciar que existen ciertos meses en los cuales el consumo cae de forma considerable.
+A continuación, se muestra el efecto que tiene la intervención del tipo 3 sobre la medición de agua consumida. Se puede apreciar que existen ciertos meses en los cuales el consumo medido cae de forma considerable.
 
 [![Consumo-de-agua-4.png](https://i.postimg.cc/XNwdPvXc/Consumo-de-agua-4.png)](https://postimg.cc/xq1XJnvc)
 
 # Intervención del medidor tipo4
-A continuación, se muestra el efecto que tiene la intervención del tipo 4 sobre el consumo energético. Se puede apreciar que existen una reducción decreciente en el consumo energético a través del tiempo.
+A continuación, se muestra el efecto que tiene la intervención del tipo 4 sobre la medición de agua consumida. Se puede apreciar que existen una reducción decreciente en el consumo medido a través del tiempo.
 
 [![Consumo-de-agua-5.png](https://i.postimg.cc/L5ndnWqm/Consumo-de-agua-5.png)](https://postimg.cc/jn031ZQ1)
 
 # Cross-validation
-Para asegurar la robustez del modelo y su correcta parametrización, se optó por utilizar la metodología de croos-validation, que consiste en utilizar cierto porcentaje de la muestra de desarrollo para entrenar el modelo y el resto para probar el efecto que tiene los parámetros sobre el desempeño del modelo ante datos nuevos. Para este proyecto se dejaron fijos valores como la profundidad del árbol, el porcentaje de variables que se van a utilizar, etc. y se hizo variar el número de árboles del modelo (n_estimators), con el fin de obtener el conjunto de parámetros que asegurasen la robustez del modelo ante un conjunto de datos nuevos.
+Para asegurar la robustez del modelo y su correcta parametrización, se optó por utilizar la metodología de croos-validation, que consiste en utilizar ciertoporcentaje de la muestra de desarrollo para entrenar el modelo y el resto para probar el efecto que tiene los parámetros sobre el desempeño del modelo ante datos nuevos. Para este proyecto se dejaron fijos valores como la profundidad del árbol, el porcentaje de variables que se van a utilizar, etc. y se hizo variar el número de árboles del modelo (n_estimators), con el fin de obtener el conjunto de parámetros que asegurasen la robustez del modelo ante un conjunto de datos nuevos.
 
 [![cross-validation.png](https://i.postimg.cc/4yrXpS3y/cross-validation.png)](https://postimg.cc/QKJL3S1Z)
 
