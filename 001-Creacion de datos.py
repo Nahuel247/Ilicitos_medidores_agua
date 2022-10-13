@@ -30,7 +30,7 @@ random.seed(seed)
 # CREAMOS LAS FUNCIONES QUE VAMOS A UTILIZAR
 #############################################
 
-# Construiremos una función que defina el comportamiento histórico del consumo energético del cliente
+# Construiremos una función que defina el comportamiento histórico del consumo de agua medido del cliente
 # según si ha adulterado o no el medidor (0 si no hay ilícito, 1 si lo hay)
 
 # Rezagos: Número de meses anteriores al mes de referencia con información, 1 es el mes más cercano y 12
@@ -54,12 +54,12 @@ def tendencia(x, rezagos, valor_max):
 # Si el cliente no ha cometido ilícito, se construyen variables históricas a partir de una función normal
 
 # Tipos de ilícitos y su descripción
-#tipo 1: Se congela el consumo energético en un valor determinado, manteniéndolo constante a través del tiempo.
-#tipo 2: Se reduce el consumo energético en cierto valor porcentual, ej. lo reduce en un 20% cada mes,
+#tipo 1: Se congela el consumo medido de agua en un valor determinado, manteniéndolo constante a través del tiempo.
+#tipo 2: Se reduce el consumo medido de agua  en cierto valor porcentual, ej. lo reduce en un 20% cada mes,
 # permitiendo la variación mensual y estacional.
-#tipo 3: Se reduce el consumo energético en ciertos periodos, siendo estos decididos por el infractor
+#tipo 3: Se reduce el consumo medido de agua en ciertos periodos, siendo estos decididos por el infractor
 # (tanto en frecuencia como en cantidad).
-#tipo 4: Se reduce de forma paulatina el consumo energético, llegando a reducirse hasta el 10% del valor real
+#tipo 4: Se reduce de forma paulatina el consumo medido de agua , llegando a reducirse hasta el 10% del valor real
 #tipo 0: Se utiliza para aquellos registros que no cometieron ilícitos
 
 def tipo_ilicito(x, x_valores):
@@ -145,7 +145,7 @@ tipo_ilicitos=patron_ilicito(15,n)
 data=data.assign(tipo_ilicito=random.sample(tipo_ilicitos,n))
 data=data.assign(ilicito= lambda x: (x.tipo_ilicito>=1) * 1)
 
-# Consumo mensual de luz (el mes 12 es el rezago más antigüo y el mes 1 el más reciente)
+# Consumo mensual de agua (el mes 12 es el rezago más antigüo y el mes 1 el más reciente)
 data_consumo=data["tipo_ilicito"].apply(tendencia,args=(rezagos, 80000))
 data_consumo.columns=np.array(["mes_"+str(i) for i in range(rezagos,0,-1)])
 data=pd.concat([data,data_consumo],axis=1)
